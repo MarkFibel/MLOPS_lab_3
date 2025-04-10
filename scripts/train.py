@@ -6,7 +6,7 @@ import torchvision
 
 from sklearn.model_selection import train_test_split
 from torch.functional import F
-from model.net import Baseline
+from net import Baseline
 from preprocess import transform_test, transform_train, get_data
 
 # Выбор устройства с учетом MPS (для Mac)

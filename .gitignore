@@ -1,1 +1,4 @@
 requirements_1.txt
+data/
+*.pyc
+.gitignore
