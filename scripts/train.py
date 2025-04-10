@@ -4,7 +4,6 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision
 
-
 from sklearn.model_selection import train_test_split
 from torch.functional import F
 from model.net import Baseline
