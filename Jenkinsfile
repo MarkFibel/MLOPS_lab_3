@@ -2,34 +2,42 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone repo') {
+        stage('Start Download') {
             steps {
-                git 'https://github.com/username/your-ml-project.git'
+                build job: "CIFAR_download"
             }
         }
-        stage('Install dependencies') {
+        
+        stage('Train') {
             steps {
-                sh 'pip install -r requirements.txt'
+                script {
+                    dir('/workspace/CIFAR_download') {
+                        build job: "CIFAR_train"
+                    }
+                }
             }
         }
-        stage('Download data') {
-            steps {
-                sh 'python scripts/download_data.py'
-            }
-        }
-        stage('Preprocess data') {
-            steps {
-                sh 'python scripts/preprocess.py'
-            }
-        }
-        stage('Train model') {
-            steps {
-                sh 'python scripts/train.py'
-            }
-        }
-        stage('Deploy model') {
-            steps {
-                sh 'nohup python scripts/serve.py &'
+
+        stage('Deploy and Test') {
+            parallel {
+                stage('Deploy') {
+                    steps {
+                        script {
+                            dir('/workspace/CIFAR_download') {
+                                build job: "CIFAR_deploy"
+                            }
+                        }
+                    }
+                }
+                stage('Test') {
+                    steps {
+                        script {
+                            dir('/workspace/CIFAR_download') {
+                                build job: "CIFAR_test"
+                            }
+                        }
+                    }
+                }
             }
         }
     }
