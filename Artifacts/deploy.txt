@@ -1,9 +1,7 @@
-Started by upstream project "CIFAR" build number 20
-originally caused by:
- Started by user Моиеенко Данил Романович
+Started by user Моиеенко Данил Романович
 Running as SYSTEM
 Building in workspace /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy
-[CIFAR_deploy] $ /bin/sh -xe /var/folders/g1/x3w02xgd31db57sbylhysjdh0000gn/T/jenkins11876678032642079372.sh
+[CIFAR_deploy] $ /bin/sh -xe /var/folders/g1/x3w02xgd31db57sbylhysjdh0000gn/T/jenkins13471667492572797762.sh
 + python3 -m venv ./lab_3
 + . ./lab_3/bin/activate
 ++ deactivate nondestructive
@@ -38,12 +36,12 @@ Requirement already satisfied: scikit-learn==1.5.2 in /Users/danilmoiseenko/.jen
 Requirement already satisfied: pytz>=2020.1 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2025.2)
 Requirement already satisfied: tzdata>=2022.7 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2025.2)
 Requirement already satisfied: python-dateutil>=2.8.2 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2.9.0.post0)
+Requirement already satisfied: filelock in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (3.18.0)
 Requirement already satisfied: typing-extensions>=4.8.0 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (4.13.1)
+Requirement already satisfied: sympy==1.13.1 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (1.13.1)
 Requirement already satisfied: networkx in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (3.2.1)
 Requirement already satisfied: fsspec in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (2025.3.2)
-Requirement already satisfied: filelock in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (3.18.0)
 Requirement already satisfied: jinja2 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (3.1.6)
-Requirement already satisfied: sympy==1.13.1 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torch==2.5.1->-r requirements.txt (line 3)) (1.13.1)
 Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from torchvision==0.20.1->-r requirements.txt (line 4)) (11.1.0)
 Requirement already satisfied: threadpoolctl>=3.1.0 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from scikit-learn==1.5.2->-r requirements.txt (line 6)) (3.6.0)
 Requirement already satisfied: joblib>=1.2.0 in /Users/danilmoiseenko/.jenkins/workspace/CIFAR_deploy/lab_3/lib/python3.9/site-packages (from scikit-learn==1.5.2->-r requirements.txt (line 6)) (1.4.2)
@@ -68,4 +66,3 @@ You should consider upgrading via the '/Users/danilmoiseenko/.jenkins/workspace/
   model.load_state_dict(torch.load('best_model.pth', map_location=device))
  * Debugger is active!
  * Debugger PIN: 128-788-152
-127.0.0.1 - - [12/Apr/2025 15:24:07] "POST /predict HTTP/1.1" 200 -

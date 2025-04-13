@@ -1,4 +1,4 @@
-зшзStarted by user Моиеенко Данил Романович
+Started by user Моиеенко Данил Романович
 [Pipeline] Start of Pipeline
 [Pipeline] node
 Running on Jenkins in /Users/danilmoiseenko/.jenkins/workspace/CIFAR
@@ -7,8 +7,8 @@ Running on Jenkins in /Users/danilmoiseenko/.jenkins/workspace/CIFAR
 [Pipeline] { (Start Download)
 [Pipeline] build
 Scheduling project: CIFAR_download
-Starting building: CIFAR_download #30
-Build CIFAR_download #30 completed: SUCCESS
+Starting building: CIFAR_download #31
+Build CIFAR_download #31 completed: SUCCESS
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
@@ -20,8 +20,8 @@ Running in /workspace/CIFAR_download
 [Pipeline] {
 [Pipeline] build
 Scheduling project: CIFAR_train
-Starting building: CIFAR_train #27
-Build CIFAR_train #27 completed: SUCCESS
+Starting building: CIFAR_train #28
+Build CIFAR_train #28 completed: SUCCESS
 [Pipeline] }
 [Pipeline] // dir
 [Pipeline] }
@@ -29,12 +29,35 @@ Build CIFAR_train #27 completed: SUCCESS
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] stage
+[Pipeline] { (Deploy and Test)
+[Pipeline] parallel
+[Pipeline] { (Branch: Deploy)
+[Pipeline] { (Branch: Test)
+[Pipeline] stage
 [Pipeline] { (Deploy)
+[Pipeline] stage
+[Pipeline] { (Test)
 [Pipeline] script
+[Pipeline] {
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /workspace/CIFAR_download
 [Pipeline] {
 [Pipeline] dir
 Running in /workspace/CIFAR_download
 [Pipeline] {
 [Pipeline] build
 Scheduling project: CIFAR_deploy
-Starting building: CIFAR_deploy #13
+[Pipeline] build
+Scheduling project: CIFAR_test
+Starting building: CIFAR_deploy #14
+Starting building: CIFAR_test #3
+Build CIFAR_test #3 completed: SUCCESS
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
