@@ -1,0 +1,40 @@
+зшзStarted by user Моиеенко Данил Романович
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /Users/danilmoiseenko/.jenkins/workspace/CIFAR
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Start Download)
+[Pipeline] build
+Scheduling project: CIFAR_download
+Starting building: CIFAR_download #30
+Build CIFAR_download #30 completed: SUCCESS
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Train)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /workspace/CIFAR_download
+[Pipeline] {
+[Pipeline] build
+Scheduling project: CIFAR_train
+Starting building: CIFAR_train #27
+Build CIFAR_train #27 completed: SUCCESS
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /workspace/CIFAR_download
+[Pipeline] {
+[Pipeline] build
+Scheduling project: CIFAR_deploy
+Starting building: CIFAR_deploy #13
